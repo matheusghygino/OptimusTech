@@ -1,0 +1,18 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+#cabecalho{
+    @include mixins.margem-central(60%);
+    margin-top: 4rem;
+    h3{
+        @include mixins.fs-cl(1rem, variaveis.$cor-secundaria);
+        text-align: center;
+    }
+    
+    p{
+        text-align: center;
+        margin: 0 auto;
+        @include mixins.fs-cl(1.2rem, variaveis.$cor-terciaria);
+        width: 85%;
+    }
+}

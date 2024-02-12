@@ -1,0 +1,36 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+#depoimentos{
+    @include mixins.margem-central(80%);
+    margin-top: 9rem;
+    background: variaveis.$cor-fundo;
+    border-radius: 1rem;
+    .depoimentos{
+        display: flex;
+        flex-direction: column;
+        h3{
+            text-align: center;
+            @include mixins.fs-cl(.8rem, variaveis.$cor-secundaria);
+            margin-top: 3rem;
+        }
+        .depoimentos-avatar{
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            img{
+                margin-top: 1rem;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+            h2{
+                @include mixins.fs-cl(1rem, variaveis.$cor-primaria);
+            }
+            span{
+                @include mixins.fs-cl(.8rem, variaveis.$cor-terciaria);
+                margin-bottom: 3rem;
+            }
+        }    
+    }
+}

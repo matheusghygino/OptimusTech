@@ -1,0 +1,8 @@
+@mixin margem-central($width){
+    margin: 0 auto;
+    width: $width;
+}
+@mixin fs-cl($f-size, $f-color){
+    font-size: $f-size;
+    color: $f-color;
+}

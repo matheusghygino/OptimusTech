@@ -1,0 +1,45 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+#formulario{
+    margin-top: 9rem;
+    background: #F9FAFB;
+    .formulario{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        @include mixins.margem-central(80%);
+        span{
+            @include mixins.fs-cl(1.2rem, variaveis.$cor-terciaria);
+        }
+        .formulario-forms{
+            padding: 2rem 0;
+            form{
+                input{
+                    padding: .8rem;
+                    border-radius: .5rem;
+                    border: 1px solid variaveis.$cor-quartenaria;
+                    width: 280px;
+                }
+                button{
+                    background: variaveis.$cor-secundaria;
+                    border-radius: .5rem;
+                    padding: .8rem;
+                    border: none;
+                    color: white;
+                    width: 100px;
+                    transition: .3s;
+                    cursor: pointer;
+                    &:hover{
+                        background: variaveis.$cor-botao;
+                    }
+                }
+            }
+        }
+        footer{
+            margin-bottom: 4rem;
+            @include mixins.fs-cl(.8rem, variaveis.$cor-terciaria)
+        }
+    }
+}

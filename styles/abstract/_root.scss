@@ -1,0 +1,13 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    @include mixins.fs-cl(2rem, variaveis.$cor-primaria);
+    text-align: center;
+}

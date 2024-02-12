@@ -1,0 +1,21 @@
+@use '../abstract/mixins';
+@use '../abstract/variaveis';
+
+#metricas{
+    display: flex;
+    justify-content: space-between;
+    @include mixins.margem-central(80%);
+    margin-top: 4.5rem;
+    .metrica-container{
+        display: block;
+        width: 280px;
+        gap: 1rem;
+        span{
+            @include mixins.fs-cl(1.2rem, variaveis.$cor-primaria);
+            font-weight: bold;
+        }
+        p{
+            @include mixins.fs-cl(1rem, variaveis.$cor-terciaria);
+        }
+    }   
+}
